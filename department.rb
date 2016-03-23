@@ -3,10 +3,10 @@ require './employee'
 class Department < ActiveRecord::Base
   attr_reader :name, :staff, :review
 
-  def initialize(department_name)
-    @name = department_name
-    @staff = []
-  end
+  # def initialize(department_name)
+  #   @name = department_name
+  #   @staff = []
+  # end
 
   def add_employee(new_employee)
     @staff << new_employee

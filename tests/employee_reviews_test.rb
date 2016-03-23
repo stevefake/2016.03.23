@@ -1,7 +1,19 @@
 
-require './tests/test_requires'
+require './tests/test_helper'
 
 class EmployeeReviews < Minitest::Test
+
+  # teardown of minitest as well as setup
+  # class StudentTest
+  #
+  # def setup
+  #   @student = Student.create(name: "Bob")
+  # end
+  #
+  # def teardown
+  #   @student = nil
+  #   Student.destroy_all
+  # end
 
   def test_classes_exist
     assert Department

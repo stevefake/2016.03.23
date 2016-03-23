@@ -2,12 +2,18 @@
 class Employee < ActiveRecord::Base
   attr_reader :name, :email, :phone, :salary, :review, :satisfactory
 
-  def initialize(name: nil, email: nil, phone: nil, salary: nil)
-    @name = name
-    @email = email
-    @phone = phone
-    @salary = salary
-  end
+  # def initialize(name: nil, email: nil, phone: nil, salary: nil)
+  #   @name = name
+  #   @email = email
+  #   @phone = phone
+  #   @salary = salary
+  # end
+
+#
+# add a foreign key to the employees table which points to a department in the
+# departments table.
+#
+#
 
   def add_employee_review(review)
     @review = review
