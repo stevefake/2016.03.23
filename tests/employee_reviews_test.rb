@@ -1,6 +1,5 @@
-require 'minitest/autorun'
-require 'minitest/pride'
-require './department'
+
+require './tests/test_requires'
 
 class EmployeeReviews < Minitest::Test
 
