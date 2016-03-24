@@ -16,7 +16,7 @@ class EmployeesDepartmentsMigration < ActiveRecord::Migration
 
     create_table :departments do |t|
       t.string :name
-      
+      t.string :employee_id
       # t.string :staff # should be moved to employee table; need an id somewhere to track; whose responsibility relates to whose? think lucidcharts
       # t.string :review # should be moved to employee table; review field just for employees table
     end

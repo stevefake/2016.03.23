@@ -46,10 +46,12 @@ skip
 
   def test_can_add_employee_to_a_department
 
-    a = {:departments.name => "Marketing"}
-    new_employee = {name: "Dan", email: "d@mail.com", phone: "914-555-5555", salary: 50000.00}
-    a.add_employee(new_employee)
-    assert_equal [new_employee], a.staff
+    a = { :name => "Marketing" }
+    new_employee = { name: "Dan", email: "d@mail.com", phone: 914-555-5555, salary: 50000 }
+    @employee = {name: "Bob", email: "d@mail.com", phone: "914-555-5555", salary: 50000.00}
+    @employee.employee_id
+    a
+    assert_equal [new_employee], employees[new_employee]
   end
 
   def test_can_get_employee_name

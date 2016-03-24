@@ -13,7 +13,7 @@ has_many :employees
 # self.department_id` || `cool_dept.id` || `cool_dept.name
 
   def add_employee(new_employee)
-    :employees[new_employee]
+    employees[new_employee]
   end
 
   def department_salary
