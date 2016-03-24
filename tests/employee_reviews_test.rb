@@ -27,31 +27,39 @@ end
   # end
 
 
+
+# @department.employee
+# @department.employees
+# employee.department       # retrieves departments from the database
+
+# Hash .to_a
+
   def test_classes_exist
     assert Department
     assert Employee
   end
 
   def test_can_create_new_department
-    a = Department.new("Marketing")
-    assert a
-    assert_equal "Marketing", a.name
+    # a = Department.new("Marketing")
+    # assert a
+    @department = {name: "Marketing"}
+    assert @department
+    assert_equal "Marketing", @department.name  #why is it nil class?
   end
 
   def test_can_create_new_employee
-skip
+
     new_employee = Employee.new(name: "Dan", email: "d@mail.com", phone: "914-555-5555", salary: 50000.00)
     assert new_employee
   end
 
   def test_can_add_employee_to_a_department
 
-    a = { :name => "Marketing" }
-    new_employee = { name: "Dan", email: "d@mail.com", phone: 914-555-5555, salary: 50000 }
-    @employee = {name: "Bob", email: "d@mail.com", phone: "914-555-5555", salary: 50000.00}
-    @employee.employee_id
-    a
-    assert_equal [new_employee], employees[new_employee]
+    a = {departments: "Marketing"}
+    new_employee = {name: "Dan", email: "d@mail.com", phone: "914-555-5555", salary: 50000.00}
+    a.add_employee(new_employee)
+  employees=(new_employee)
+    assert_equal [new_employee], a.staff
   end
 
   def test_can_get_employee_name

@@ -8,7 +8,8 @@ class EmployeesDepartmentsMigration < ActiveRecord::Migration
       t.integer :salary
       t.string :review
       t.boolean :satisfactory
-      t.string :staff
+      # t.string :staff
+      t.belongs_to :department, index = true
       t.integer :department_id
     end
     # add a foreign key to the employees table which points to a department in the
