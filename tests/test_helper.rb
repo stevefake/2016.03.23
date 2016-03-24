@@ -14,4 +14,4 @@ require './employee'
 require './employees_departments_reviews_migration'
 require './db_connection.rb'
 
-# EmployeesDepartmentsMigration.migrate(:up)
+ # EmployeesDepartmentsMigration.migrate(:up)

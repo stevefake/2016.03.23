@@ -8,12 +8,17 @@ class EmployeesDepartmentsMigration < ActiveRecord::Migration
       t.integer :salary
       t.string :review
       t.boolean :satisfactory
+      t.string :staff
+      t.integer :department_id
     end
+    # add a foreign key to the employees table which points to a department in the
+    # departments table.
 
     create_table :departments do |t|
       t.string :name
-      t.string :staff
-      t.string :review
+      
+      # t.string :staff # should be moved to employee table; need an id somewhere to track; whose responsibility relates to whose? think lucidcharts
+      # t.string :review # should be moved to employee table; review field just for employees table
     end
   end
 

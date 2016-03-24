@@ -1,6 +1,4 @@
-
 class Employee < ActiveRecord::Base
-  attr_reader :name, :email, :phone, :salary, :review, :satisfactory
 
   # def initialize(name: nil, email: nil, phone: nil, salary: nil)
   #   @name = name
@@ -8,12 +6,6 @@ class Employee < ActiveRecord::Base
   #   @phone = phone
   #   @salary = salary
   # end
-
-#
-# add a foreign key to the employees table which points to a department in the
-# departments table.
-#
-#
 
   def add_employee_review(review)
     @review = review
@@ -37,18 +29,18 @@ class Employee < ActiveRecord::Base
       matches = @review.scan(r).count
       negative_matches += matches
     end
-    @satisfactory = (positive_matches > negative_matches)
+    :employees.satisfactory = (positive_matches > negative_matches)
   end
 
   def set_employee_performance(boolean)
-    @satisfactory = boolean
+    :employees.satisfactory = boolean
   end
 
   def raise_by_percent(raise_percentage)
-    @salary += (@salary * raise_percentage)
+    :employees.salary += (:salary * raise_percentage)
   end
 
   def raise_by_amount(raise_amount)
-    @salary += raise_amount
+    :employees.salary += raise_amount
   end
 end
