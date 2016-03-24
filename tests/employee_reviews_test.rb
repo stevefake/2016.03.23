@@ -31,8 +31,17 @@ end
 # @department.employee
 # @department.employees
 # employee.department       # retrieves departments from the database
+# employee.department.add_new(employee_obj)
 
 # Hash .to_a
+
+# .order(fieldnameinkeyofhash:, :value)
+# .find(keynumber)
+# .find will error if id not found; .where will simply return nil
+
+# ActiveRecord gives us the .create method (takes the record we're passing to it
+# and save it into the database; you'd use this rather than .new if you already
+# know everything you need to create the record).
 
   def test_classes_exist
     assert Department
@@ -48,8 +57,8 @@ end
   end
 
   def test_can_create_new_employee
-
-    new_employee = Employee.new(name: "Dan", email: "d@mail.com", phone: "914-555-5555", salary: 50000.00)
+    new_employee = Employee.create(name: "Dan", email: "d@mail.com", phone: "914-555-5555", salary: 50000.00)
+    # new_employee = Employee.new(name: "Dan", email: "d@mail.com", phone: "914-555-5555", salary: 50000.00)
     assert new_employee
   end
 
